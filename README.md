@@ -8,7 +8,7 @@ This project demonstrates the complete data pipeline process of importing, query
 
 * **Project Title**: MongoDB-Pentaho ETL Integration
 * **Student Name**: Ashish Pandya
-* **Course**: CDBM-603 – Data Engineering
+* **Course**: Data Engineering
 * **Tools Used**: MongoDB Atlas, mongoimport, MongoDB Shell, PDI (Spoon), Atlas Charts
 * **Dataset**: `Employee_DATA.csv`
 
@@ -56,7 +56,6 @@ Performed 10 queries, including:
   * Bar chart: Position-wise average salary
   * Pie chart: Gender distribution
 * Dashboard Name: `Ashish_MyCompanyEmployees`
-* Shared public link and screenshots
 
 **📸 Dashboard Sample Screenshot**
 ![Dashboard Screenshot](Pentaho_ETL/Dashboard.PNG)
@@ -99,7 +98,7 @@ MongoDB-Pentaho-ETL-Project/
 │   └── Project_Report.docx
 │
 ├── Screen_Shots/
-│   └── (Multiple screenshots for all tasks and pipeline stages)
+│   └── (Multiple screenshots for all tasks)
 ```
 
 ---
