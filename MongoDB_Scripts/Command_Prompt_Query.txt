@@ -1,0 +1,115 @@
+Task-1
+1........
+"C:\Users\Admin\Downloads\mongodb-database-tools-windows-x86_64-100.12.0\bin\mongoimport.exe" --uri "mongodb+srv://ashishpandya7122000:*******@chatbot.uta4z.mongodb.net/" ^
+--db Ashish_MajorAssignment02 ^
+--collection MyCompanyEmployees ^
+--type csv ^
+--headerline ^
+--file "C:\Users\Admin\Desktop\Major-assignment-2\Employee_DATA.csv"
+
+mongosh "mongodb+srv://ashishpandya7122000:*********@chatbot.uta4z.mongodb.net/"
+
+2/......
+use Ashish_MajorAssignment02
+db.MyCompanyEmployees.findOne()
+
+
+
+
+Task-2
+1.....
+db.MyCompanyEmployees.find(
+  {},
+  { _id: 0, first_name: 1, last_name: 1, email: 1 }
+).limit(10)
+
+db.MyCompanyEmployees.countDocuments()
+
+2......
+db.MyCompanyEmployees.countDocuments({ position: "Surveyor" })
+
+3.....
+db.MyCompanyEmployees.find({
+  gender: "Female",
+  age: { $lt: 50 },
+  position: "Electricians"
+})
+
+db.MyCompanyEmployees.countDocuments({
+  gender: "Female",
+  age: { $lt: 50 },
+  position: "Electricians"
+})
+
+4..........
+db.MyCompanyEmployees.find({
+  gender: "Male",
+  age: { $gt: 50 },
+  position: { $in: ["Engineer", "Architect"] }
+})
+
+db.MyCompanyEmployees.countDocuments({
+  gender: "Male",
+  age: { $gt: 50 },
+  position: { $in: ["Engineer", "Architect"] }
+})
+
+5.........
+
+db.MyCompanyEmployees.find({
+  last_name: { $regex: "^Dow", $options: "i" },
+  salary: { $gt: 65000 }
+})
+
+db.MyCompanyEmployees.countDocuments({
+  last_name: { $regex: "^Dow", $options: "i" },
+  salary: { $gt: 65000 }
+})
+
+6..........
+
+db.MyCompanyEmployees.distinct("position")
+
+7.....
+
+db.MyCompanyEmployees.find({
+  salary: { $gte: 50000, $lte: 60000 }
+}).sort({ age: -1 })
+
+db.MyCompanyEmployees.countDocuments({
+  salary: { $gte: 50000, $lte: 60000 }
+})
+
+8......
+db.MyCompanyEmployees.countDocuments({ gender: "Male" })
+
+
+9.......
+db.MyCompanyEmployees.find({ gender: "Female" }).sort({ salary: -1 }).limit(5)
+
+
+db.MyCompanyEmployees.countDocuments({ gender: "Female" }) // Optional count
+
+10......
+
+db.MyCompanyEmployees.find({
+  $or: [
+    { first_name: { $regex: "an", $options: "i" } },
+    { last_name: { $regex: "an", $options: "i" } }
+  ]
+})
+
+db.MyCompanyEmployees.countDocuments({
+  $or: [
+    { first_name: { $regex: "an", $options: "i" } },
+    { last_name: { $regex: "an", $options: "i" } }
+  ]
+})
+
+Task-3
+
+https://charts.mongodb.com/charts-project-0-wkgldds/public/dashboards/455bc484-07c4-4f75-a6c0-141cc8d2f4ed
+
+
+
+
