@@ -1,0 +1,34 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore Python cache (if any Python scripts added later)
+__pycache__/
+*.py[cod]
+
+# Ignore Pentaho temporary or log files
+*.tmp
+*.log
+*.bak
+
+# Ignore IDE settings (e.g., VS Code, IntelliJ)
+.vscode/
+.idea/
+
+# Ignore dataset exports or backups
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore personal environment/config files
+.env
+*.env
+
+# Ignore output or auto-generated files
+*.out
+*.class
+
+# Ignore Microsoft Office temporary files
+~$*.docx
+~$*.xlsx
